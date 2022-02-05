@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>502.4,1694.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>864,1654.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Classify_Email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="46">
@@ -65,7 +65,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Classify_Apps_Review" sap:VirtualizedContainerService.HintSize="433.6,1529.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Classify_Apps_Review" sap:VirtualizedContainerService.HintSize="433.6,1589.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_AppReview" />
       <Variable x:TypeArguments="x:String" Name="str_MLOutput" />
@@ -101,16 +101,16 @@
       </Assign>
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[str_AppReview]" />
     </Sequence>
-    <Sequence DisplayName="Get Prediction from AI Fabric" sap:VirtualizedContainerService.HintSize="392,444" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Get Prediction from AI Fabric" sap:VirtualizedContainerService.HintSize="392,504" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uma:MLSkills ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SelectedMLSkill="{x:Reference __ReferenceID0}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" DisplayName="MLSkill" sap:VirtualizedContainerService.HintSize="350.4,351.2" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[str_AppReview]" JsonResponse="[str_MLOutput]" NextPageNum="2" RefreshList="False" TotalCount="1">
+      <uma:MLSkills ApiKey="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SelectedMLSkill="{x:Reference __ReferenceID0}" SkillURL="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" Connection="Robot" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="350.4,411.2" sap2010:WorkflowViewState.IdRef="MLSkills_1" Item="[str_AppReview]" JsonResponse="[str_MLOutput]" NextPageNum="2" RefreshList="False" TotalCount="1">
         <uma:MLSkills.MLSkillList>
           <scg:List x:TypeArguments="um:MLSkill" Capacity="4">
-            <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://aifabric.deskover.com/mlskills/host/29f84779-b2e1-4d6d-99a7-80704146bd04/googleappsreview" Description="GoogleAppsReview" Id="ef79fb3d-2b9d-4e20-979f-259cdf86a0ba" InputDescription="Text to be analyzed.&#xA;For example: &quot;I am dissatisfied with this service.&quot;" InputType="JSON" Name="GoogleAppsReview" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: &quot;Very Negative&quot;, &quot;Negative&quot;, &quot;Neutral&quot;, &quot;Positive&quot;, &quot;Very Positive&quot;&#xA;For example:  '{&quot;sentiment&quot;: &quot;Very Negative&quot;, &quot;confidence&quot;: 0.97}'" ProjectId="7360bb3a-f92a-48ea-8f55-900d8fe0befc" TenantId="29f84779-b2e1-4d6d-99a7-80704146bd04" />
+            <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-eus.deskover.com/mlskills/92900e12-40c1-4684-9d13-ea137148bfa2/65791b69-a6c6-4340-8673-d578b15d4401/googleappssentimentanalysis" AccountId="92900e12-40c1-4684-9d13-ea137148bfa2" Description="GoogleAppsSentimentAnalysis" Id="14c82922-fc3e-4c89-9582-da18e6660b70" InputDescription="Text to be analyzed. For example: 'I am dissatisfied with this service.'" InputType="JSON" Name="GoogleAppsSentimentAnalysis" OutputDescription="JSON with class name and confidence on that class prediction (between 0-1) Class prediction can be one of: 'Very Negative', 'Negative', 'Neutral', 'Positive', 'Very Positive' For example: '{'sentiment': 'Very Negative', 'confidence': 0.97}'" ProjectId="77b6d102-e28c-472c-b53a-8dc2d61d40bb" TenantId="65791b69-a6c6-4340-8673-d578b15d4401" />
           </scg:List>
         </uma:MLSkills.MLSkillList>
       </uma:MLSkills>

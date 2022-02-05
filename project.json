@@ -1,34 +1,38 @@
 {
-  "name": "GoogleAppsSentimentAnalysis",
-  "description": "Sentiment Analysis on User Reviews of Android Apps with AI Fabric",
+  "name": "01_AICenter_GoogleAppsSentimentAnalysis",
+  "description": "Sentiment Analysis on User Reviews of Android Apps with AI Center",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.DocumentProcessing.Contracts": "[1.8.0-preview]",
-    "UiPath.Excel.Activities": "[2.9.0-preview]",
-    "UiPath.Form.Activities": "[1.1.5]",
-    "UiPath.FormActivityLibrary.Contracts": "[1.1.1]",
-    "UiPath.Mail.Activities": "[1.9.0-preview]",
-    "UiPath.MLServices.Activities": "[1.1.1]",
-    "UiPath.Persistence.Activities": "[1.1.5]",
-    "UiPath.System.Activities": "[20.6.1-preview]",
-    "UiPath.UIAutomation.Activities": "[20.6.0-preview]",
-    "UiPath.WebAPI.Activities": "[1.4.5]"
+    "UiPath.DocumentProcessing.Contracts": "[1.11.0]",
+    "UiPath.Excel.Activities": "[2.11.4]",
+    "UiPath.Form.Activities": "[1.8.0]",
+    "UiPath.Mail.Activities": "[1.12.3]",
+    "UiPath.MLServices.Activities": "[1.2.0]",
+    "UiPath.Persistence.Activities": "[1.3.2]",
+    "UiPath.System.Activities": "[21.10.4]",
+    "UiPath.UIAutomation.Activities": "[21.10.5]",
+    "UiPath.WebAPI.Activities": "[1.9.2]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.6.0.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.2",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": true,
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -37,11 +41,27 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfoCollection": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
   },
   "arguments": {
     "input": [],
     "output": []
   },
- "expressionLanguage": "CSharp"
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "2493eef2-0c13-4b61-99b7-f01cb08ea00d",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
 }
